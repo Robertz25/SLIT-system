@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Oppgave109 (
+Oppgave_ID int NOT NULL AUTO_INCREMENT,
+oppgavenavn varchar(255) NOT NULL,
+filename varchar(255) NOT NULL,
+added_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+course_id varchar (7) NOT NULL,
+user_id varchar(7) NOT NULL,
+Godskjenning varchar(7) NOT Null,
+foreign key (course_id) references course (course_id),
+foreign key (user_id) references user_(user_id),
+PRIMARY KEY (Oppgave_ID)
+);	
